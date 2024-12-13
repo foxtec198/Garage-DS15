@@ -1,0 +1,86 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    --primary: #193076;
+    --sencondary: #e61a30;
+}
+
+.title1{
+    font-size: 10vh;
+    font-weight: 700;
+    color: var(--primary);
+    text-shadow: #fff 2px 2px 20px;
+}
+
+.title2{
+    font-size: 8vh;
+    font-weight: 700;
+    color: var(--sencondary);
+}
+
+.title3{
+    font-size: 8vh;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.sub1{
+    text-decoration: underline 10px var(--primary);
+    font-weight: 700;
+}
+
+.sub2{
+    text-decoration: underline 10px var(--sencondary);
+    font-weight: 700;
+}
+
+.hc1, .hc2{
+    filter: grayscale(1);
+}
+
+.hc1:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+.hc2:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+.banner{
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner::before    {
+    content: '';
+    position: absolute;
+    color: #fff;
+    z-index: -1;
+    background: url('https://placehold.co/1080x480');
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    inset: 0;
+    opacity: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+    .mobile-hide{ display: none !important; }
+}
+
+@media only screen and (max-width: 500px) {
+    .mobile{ display: inline !important; }
+}
+
+@media only screen and (min-width: 500px) {
+    .mobile{ display: none !important; }
+}
