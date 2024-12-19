@@ -4,14 +4,18 @@ body, html{
 }
 
 .title1{
-    font-size: 10vh;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--primary);
     /* text-shadow: #fff 2px 2px 20px; */
     text-shadow: var(--sencondary) 2px 4px 10px;
 }
+.bi-star-fill{
+    font-size: 30px;
+}
 .bi-star-fill:hover{
     color: #ffc300;
+    transform: rotate(10deg);
 }
 .btn:hover{
     transform: scale(1.05);
