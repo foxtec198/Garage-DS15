@@ -7,9 +7,15 @@ body, html{
     font-size: 10vh;
     font-weight: 700;
     color: var(--primary);
-    text-shadow: #fff 2px 2px 20px;
+    /* text-shadow: #fff 2px 2px 20px; */
+    text-shadow: var(--sencondary) 2px 4px 10px;
 }
-
+.bi-star-fill:hover{
+    color: #ffc300;
+}
+.btn:hover{
+    transform: scale(1.05);
+}
 .title2{
     font-size: 6vh;
     font-weight: 700;
@@ -18,7 +24,7 @@ body, html{
 
 .title3{
     font-size: 6vh;
-    font-weight: 700;
+    font-weight: 700; 
     color: var(--primary);
 }
 
@@ -63,14 +69,116 @@ body, html{
     position: absolute;
     color: #fff;
     z-index: -1;
-    background: url('https://placehold.co/1080x480');
+    /* background: url('https://placehold.co/1080x480'); */
+    background: url('/src/img/pexels-tdcat-70912.jpg');
     background-color: #000;
     background-position: center;
     background-size: cover;
     inset: 0;
-    opacity: 50%;
+    filter: blur(4px);
+    /* opacity: 50%; */
+}
+.containerPt2 {
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
 }
 
+/* From Uiverse.io by SouravBandyopadhyay */ 
+.notification {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    max-width: 25rem;
+    min-height: 8rem;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    --color: #32a6ff
+}
+  
+.notification:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #18181b;
+    z-index: 2
+}
+  
+.notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: var(--gradient);
+    transition: transform 300ms ease;
+    z-index: 4;
+}
+
+.notification:hover:after {
+    transform: translateX(0.15rem)
+}
+  
+.notititle {
+    color: var(--color);
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+  
+.notification:hover .notititle {
+    transform: translateX(0.15rem)
+}
+  
+.notibody {
+    color: #99999d;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+  
+.notification:hover .notibody {
+    transform: translateX(0.25rem)
+}
+  
+.notiglow, .notiborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle closest-side at center, white, transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  
+.notiglow {
+    z-index: 3;
+}
+  
+.notiborderglow {
+    z-index: 1;
+}
+  
+.notification:hover .notiglow {
+    opacity: 0.1
+}
+  
+.notification:hover .notiborderglow {
+    opacity: 0.1
+}
+  
 @media only screen and (max-width: 500px) {
     .mobile-hide{ display: none !important; }
 }
@@ -81,4 +189,146 @@ body, html{
 
 @media only screen and (min-width: 500px) {
     .mobile{ display: none !important; }
+}
+
+
+/* From Uiverse.io by ammarsaa */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+  
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: var(--sencondary);
+}
+  
+.title::before {
+    width: 18px;
+    height: 18px;
+}
+  
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+  
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--sencondary);
+}
+  
+.message, 
+.signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+  
+.signin {
+    text-align: center;
+}
+  
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+  
+.signin a {
+    color: #00bfff;
+}
+  
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+  
+.form label {
+    position: relative;
+}
+  
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+  
+.form label .input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+  
+.form label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+  
+.form label .input:focus + span,
+.form label .input:valid + span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+  
+.input {
+    font-size: medium;
+}
+  
+.submit {
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: var(--sencondary);
+}
+  
+.submit:hover {
+    background-color: #780000;
+}
+  
+@keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
 }
