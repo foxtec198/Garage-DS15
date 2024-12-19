@@ -6,9 +6,13 @@ body, html{
 .title1{
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary);
-    /* text-shadow: #fff 2px 2px 20px; */
-    text-shadow: var(--sencondary) 2px 4px 10px;
+    /* text-shadow: var(--sencondary) 4px 4px 15px; */
+    text-shadow: var(--sencondary) 4px 4px 15px;
+    
+}
+.bg-blue{
+    background: var(--primary);
+    color: white;
 }
 .bi-star-fill{
     font-size: 30px;
@@ -334,5 +338,51 @@ body, html{
     to {
       transform: scale(1.8);
       opacity: 0;
+    }
+}
+
+.neon {
+    animation: piscando 5s infinite;
+}
+  
+@keyframes piscando {
+    0% {
+      border-color: transparent;
+      opacity: 0.1;
+    }
+    
+    2% {
+      border-color: #6CE8EB;
+      opacity: 1;
+    }
+    
+    4% {
+      border-color: transparent;
+      opacity: 0.5;
+    }
+    
+    8% {
+      border-color: #6CE8EB;
+      opacity: 1;
+    }
+    
+    28% {
+      border-color: #6CE8EB;
+      opacity: 1;
+    }
+    
+    30% {
+      border-color: transparent;
+      opacity: 0.5;
+    }
+    
+    36% {
+      border-color: #6CE8EB;
+      opacity: 1;
+    }
+    
+    100% {
+      border-color: #6CE8EB;
+      opacity: 1;
     }
 }
